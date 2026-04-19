@@ -1,0 +1,18 @@
+baseURL: https://example.org/
+languageCode: ru-ru, en-us
+title: Outtakes & Extras
+theme: ["PaperMod"]
+rssFullText: true
+summaryLength: 30
+
+defaultContentLanguage: ru
+defaultContentLanguageInSubdir: true
+
+  #languages:
+  #  en:
+  #    DateFormatSingle: 2 January 2006
+  #    DateFormatList: January 2, 2006"
+  #  ru:
+  #    DateFormatSingle: 2 января 2006
+  #    DateFormatList: 2 января 2006
+
