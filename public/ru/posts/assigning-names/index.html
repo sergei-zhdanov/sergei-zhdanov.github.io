@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" dir="auto" data-theme="auto">
+<html lang="ru" dir="auto" data-theme="dark">
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 <meta name="description" content="Почему у кораблей есть имена, а у самолетов &ndash; нет?">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/ru/posts/assigning-names/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.ac697e56247425b1043a66042a6a026a49ddff8ded44fafc5f929a590c1b2eae.css" integrity="sha256-rGl&#43;ViR0JbEEOmYEKmoCaknd/43tRPr8X5KaWQwbLq4=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.deb1cb2bbeaa745f9a04bb2750c062e125dd0c6561d00f29ced5d1d419088389.css" integrity="sha256-3rHLK76qdF&#43;aBLsnUMBi4SXdDGVh0A8pztXR1BkIg4k=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -27,56 +27,51 @@
         }
 
     </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
 </noscript>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
+    if (localStorage.getItem("pref-theme") === "light") {
         document.querySelector("html").dataset.theme = 'light';
     }
 
 </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.6/dist/katex.min.css" integrity="sha384-mXD7x5S50Ko38scHSnD4egvoExgMPbrseZorkbE49evAfv9nNcbrXJ8LLNsDgh9d" crossorigin="anonymous">
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.6/dist/katex.min.js" integrity="sha384-j/ZricySXBnNMJy9meJCtyXTKMhIJ42heyr7oAdxTDBy/CYA9hzpMo+YTNV5C+1X" crossorigin="anonymous"></script>
+
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.6/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    
+    <script>
+            
+            document.addEventListener("DOMContentLoaded", function() {
+                renderMathInElement(document.body, {
+                    
+                    
+                        delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: "\begin{equation}", right: "\end{equation}", display: true},
+                        {left: "\begin{align}", right: "\end{align}", display: true},
+                    ],
+                    
+                    throwOnError : false
+                });
+            });
+    </script>
+
+
 </head>
 <body id="top">
     <header class="header">
-    <nav class="nav">
+    <nav class="nav" style="text-align: center;">
         <div class="logo">
             <a href="http://localhost:1313/ru/" accesskey="h" title="Outtakes &amp; Extras (Alt + H)">Outtakes &amp; Extras</a>
+       </div>
+        <ul id="menu">
+        </ul>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -99,9 +94,7 @@
                     </svg>
                 </button>
             </div>
-        </div>
-        <ul id="menu">
-        </ul>
+ 
     </nav>
 </header>
 <main class="main">
@@ -116,7 +109,9 @@
 
 </div>
   </header> 
-  <div class="post-content"><p>Я тут как-то рассуждал о разнице между собственными именами и номерами после того, как в рамках ностальгии по 2000-му году перечитывал &ldquo;Охоту на овец&rdquo; Мураками. Там обнаружился вот такой давно забытый образчик концептуального анализа &ndash; довольно-таки дистиллированный и, конечно, в форме диалога. Цитирую:</p>
+
+  <div class="post-content"><p>$Ra_1, a_@$</p>
+<p>Я тут как-то рассуждал о разнице между собственными именами и номерами после того, как в рамках ностальгии по 2000-му году перечитывал &ldquo;Охоту на овец&rdquo; Мураками. Там обнаружился вот такой давно забытый образчик концептуального анализа &ndash; довольно-таки дистиллированный и, конечно, в форме диалога. Цитирую:</p>
 <blockquote>
 <p>&ndash; А почему, например, у кораблей есть имена, а у самолетов &ndash; нет? &ndash; спросил я водителя. &ndash; Почему все самолеты называют только номерами: Девятьсот Семьдесят Первый, Триста Двадцать Шестой, &ndash; и никто не придумывает и для них имена &ndash; что-нибудь типа «Летучий Ландыш» или, скажем, «Роза Небес»?</p>
 <p>&ndash; Наверное, самолетов гораздо больше, чем кораблей… Массовая продукция.</p>
@@ -205,7 +200,7 @@
 </li>
 <li>
 <p>Астероиды. Некоторым присваиваются имена в честь знаменитых людей, но
-основной практикой остается нумерация. Так же, в предыдущем пункте мы имели
+основной практикой остается нумерация. Так же, как в предыдущем пункте мы имели
 псевдо-номера, здесь, по-видимому, имеются псевдо-имена. Причина присвоения
 подобных &ldquo;имен&rdquo; астероидам коммеморативные, в обычном общении эти имена не
 употребляются, а чтобы их использовать, приходится справляться по мануалу.</p>
@@ -226,12 +221,20 @@
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/ru/posts/opening/">
+    <span class="title">Следующая »</span>
+    <br>
+    <span>Test One Two</span>
+  </a>
+</nav>
+
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 </span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/ru/"></a></span> · 
 
     <span>
         Powered by

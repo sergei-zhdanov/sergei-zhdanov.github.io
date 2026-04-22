@@ -1,5 +1,5 @@
 <header class="header">
-    <nav class="nav">
+    <nav class="nav" style="text-align: center;">
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}
@@ -79,7 +79,8 @@
                     {{- end }}
                 {{- end }}
             </div>
-        </div>
+ 
+       </div>
         {{- $currentPage := . }}
         <ul id="menu">
             {{- range site.Menus.main }}
@@ -106,5 +107,6 @@
             </li>
             {{- end }}
         </ul>
+
     </nav>
 </header>

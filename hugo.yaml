@@ -3,8 +3,16 @@ languageCode: ru-ru, en-us
 title: Outtakes & Extras
 author: Sergei Zhdanov
 theme: ["PaperMod"]
-rssFullText: true
 summaryLength: 30
+
+params:
+ ShowFullTextinRSS: true
+ defaultTheme: dark
+ disableThemeToggle: false
+ disableSpecial1stPost: true
+ showtoc: true
+ ShowPostNavLinks: true
+ comments: true
 
 defaultContentLanguage: ru
 defaultContentLanguageInSubdir: true
